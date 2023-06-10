@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
+use Inertia\Inertia;
 
 class GameController extends Controller
 {
@@ -13,7 +14,10 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
+        $games = Game::all();
+        return Inertia::render('Game/Index', [
+            'games' => $games
+        ]);
     }
 
     /**
@@ -37,7 +41,10 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        //
+        $game = Game::find($game);
+        return Inertia::render('Game/Show', [
+            'game' => $game
+        ]);
     }
 
     /**

@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique(); // Nombre del tipo
-            $table->integer('options'); // Número de opciones
+            $table->string('name'); // Nombre del juego.
+            $table->text('description'); // Descripción del juego.
+            $table->time('duration')->default(15.00); // Duración media de la partida, Default 15min.
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('games');
     }
 };

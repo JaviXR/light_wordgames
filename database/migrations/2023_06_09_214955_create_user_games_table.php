@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('user_games', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique(); // Nombre del tipo
-            $table->integer('options'); // Número de opciones
+            $table->foreignId('game_id')
+                ->constrained('games')
+                ->cascadeOnDelete();
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('user_games');
     }
 };

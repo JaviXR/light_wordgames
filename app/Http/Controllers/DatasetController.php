@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dataset;
 use App\Http\Requests\StoreDatasetRequest;
 use App\Http\Requests\UpdateDatasetRequest;
+use Inertia\Inertia;
 
 class DatasetController extends Controller
 {
@@ -13,7 +14,10 @@ class DatasetController extends Controller
      */
     public function index()
     {
-        //
+        $datasets = Dataset::all();
+        return Inertia::render('Dataset/Index', [
+            'datasets' => $datasets
+        ]);
     }
 
     /**
@@ -37,7 +41,10 @@ class DatasetController extends Controller
      */
     public function show(Dataset $dataset)
     {
-        //
+        $dataset = Dataset::find($dataset);
+        return Inertia::render('Dataset/Show', [
+            'dataset' => $dataset
+        ]);
     }
 
     /**

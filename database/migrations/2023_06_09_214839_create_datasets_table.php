@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('datasets', function (Blueprint $table) {
             $table->id();
+            $table->string('name'); // Nombre del dataset.
+            $table->jsonb('data'); // JSONB con el set de datos (preguntas y respuestas / conjuntos de palabras) a guardar.
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('images');
+        Schema::dropIfExists('datasets');
     }
 };

@@ -41,7 +41,7 @@ const logout = () => {
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
+                                <Link :href="route('/home')">
                                     <ApplicationMark class="block h-9 w-auto" />
                                 </Link>
                             </div>
@@ -50,6 +50,16 @@ const logout = () => {
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
+                                </NavLink>
+                            </div>
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <NavLink :href="route('game.index')" :active="route().current('game.index')">
+                                    Games
+                                </NavLink>
+                            </div>
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <NavLink :href="route('dataset.index')" :active="route().current('dataset.index')">
+                                    My Word Sets
                                 </NavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -200,6 +210,15 @@ const logout = () => {
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('game.index')" :active="route().current('games')">
+                            Games
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('dataset.index')" :active="route().current('datasets')">
+                            My Word Sets
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('about')" :active="route().current('about')">
+                            About
                         </ResponsiveNavLink>
                     </div>
 
