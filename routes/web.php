@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\DatasetController;
 use App\Http\Controllers\GameController;
-use App\Models\Dataset;
-use App\Models\Game;
+use App\Http\Controllers\WebController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 /*
@@ -26,7 +26,7 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-})->name('/home');
+})->name('home');
 
 Route::middleware([
     'auth:sanctum',
@@ -34,15 +34,23 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
+    //Dashboard
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
+    //Games
     Route::get('/games', [GameController::class, 'index'])->name('game.index');
     Route::get('/games/{$game}', [GameController::class, 'show'])->name('game.show');
 
+    //Datasets
     Route::get('/datasets', [DatasetController::class, 'index'])->name('dataset.index');
     Route::get('/datasets/{$dataset}', [DatasetController::class, 'show'])->name('dataset.show');
 
+    //About
     Route::inertia('/about', 'About')->name('about');
+
+    //Locales
+    Route::get('/{locale}', [WebController::class, 'swapLocale'])->name('locale');
 });
+

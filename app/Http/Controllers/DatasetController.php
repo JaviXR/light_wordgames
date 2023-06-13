@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Dataset;
 use App\Http\Requests\StoreDatasetRequest;
 use App\Http\Requests\UpdateDatasetRequest;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class DatasetController extends Controller
@@ -14,7 +16,7 @@ class DatasetController extends Controller
      */
     public function index()
     {
-        $datasets = Dataset::all();
+        $datasets = auth()->user()->datasets()->with('type')->get();
         return Inertia::render('Dataset/Index', [
             'datasets' => $datasets
         ]);
