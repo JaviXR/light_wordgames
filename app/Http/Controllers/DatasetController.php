@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dataset;
 use App\Http\Requests\StoreDatasetRequest;
 use App\Http\Requests\UpdateDatasetRequest;
+use App\Models\Type;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
@@ -27,7 +28,9 @@ class DatasetController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Dataset/Create', [
+            'types' => Type::all(),
+        ]);
     }
 
     /**
@@ -35,7 +38,14 @@ class DatasetController extends Controller
      */
     public function store(StoreDatasetRequest $request)
     {
-        //
+        Dataset::create([
+            'user_id' => Auth::id(),
+            'name' => $request->name,
+            'type_id' => $request->type_id,
+            'content' => $request->content,
+        ]);
+
+        return redirect()->route('datasets.index');
     }
 
     /**

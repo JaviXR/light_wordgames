@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('datasets', function (Blueprint $table) {
             $table->id();
             $table->string('name'); // Nombre del dataset.
-            $table->jsonb('data'); // JSONB con el set de datos (preguntas y respuestas / conjuntos de palabras) a guardar.
+            $table->jsonb('content'); // JSONB con el set de datos (preguntas y respuestas / conjuntos de palabras) a guardar.
             $table->timestamps();
         });
     }

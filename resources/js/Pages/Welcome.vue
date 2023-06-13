@@ -117,7 +117,7 @@ defineProps({
                             <div>
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                                     <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left sm:ml-0">
-                                        {{$t('about')}}
+                                        {{$t('about.text')}}
                                     </div>
                                     <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left sm:ml-0">
                                         {{$t('location')}}

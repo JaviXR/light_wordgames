@@ -18,8 +18,14 @@ class GameSeeder extends Seeder
                 [
                     'name' => 'Trivia',
                     'description' => 'Juego de preguntas con respuesta abierta.',
-                    'duration' => 7.00,
+                    'duration' => 10.00,
                     'type_id' => 1,
+                ],
+                [
+                    'name' => 'The Hangman',
+                    'description' => 'Juego de adivinar la palabra mediante prueba y error.',
+                    'duration' => 5.00,
+                    'type_id' => 4,
                 ],
                 [
                     'name' => 'Millionaire',

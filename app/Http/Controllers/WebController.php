@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
-use LaravelLang\Publisher\Facades\Helpers\Locales;
 
 class WebController extends Controller
 {

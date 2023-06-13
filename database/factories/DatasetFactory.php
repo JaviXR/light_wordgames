@@ -12,7 +12,7 @@ class DatasetFactory extends Factory
     public function definition(): array
     {
         $type = $this->faker->numberBetween(1, 5);
-        $data = null;
+        $content = null;
         $options = null;
         $question = null;
 
@@ -23,10 +23,15 @@ class DatasetFactory extends Factory
                 $this->faker->text(30),
                 $this->faker->text(30),
             ];
-        } else if ($type === 4) {
+        } else if ($type === 3) {
             $options = [
                 $this->faker->text(30),
                 $this->faker->text(30),
+                $this->faker->text(30),
+                $this->faker->text(30),
+            ];
+        } else if ($type === 4) {
+            $options = [
                 $this->faker->text(30),
                 $this->faker->text(30),
             ];
@@ -44,7 +49,7 @@ class DatasetFactory extends Factory
             'name' => $this->faker->name,
             'user_id' => $this->faker->numberBetween(1, 17),
             'type_id' => $type,
-            'data' => $data,
+            'content' => $content,
         ];
     }
 }

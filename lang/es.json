@@ -197,7 +197,10 @@
     "welcome.t1" : "Placeholder title",
     "welcome.t2" : "Novedades",
     "welcome.t3" : "Contacto",
-    "welcome.t4" : "Sobre LWG",
+    "welcome.t4" : "Acerca de",
     "about.text" : "Trabajo de Final de Grado de Javier Rodríguez Arenas, estudiante de Grado Superior en Desarrollo de Aplicaciones Multiplataformas, para el CIFP Carlos III.",
-    "location" : "11 Jun 2023, Cartagena, Murcia, Spain"
+    "location" : "11 Jun 2023, Cartagena, Murcia, Spain",
+
+    "I don't know what to put here, so I'll just put a bunch of text": "No sé qué poner aquí, así que pondré un puñado de texto",
+    "Here you have a random gag to(maybe) make you laugh" : "Aquí tienes un chiste aleatorio para hacerte reír (quizás)"
 }

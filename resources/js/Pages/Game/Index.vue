@@ -19,8 +19,6 @@ const props = defineProps({
 
         <div class="flex flex-wrap flex-row justify-center py-5 w-full h-full overflow-x-auto">
             <Game v-for="game in games" :key="game.id" :game="game" />
-            <Game v-for="game in games" :key="game.id" :game="game" />
-            <Game v-for="game in games" :key="game.id" :game="game" />
         </div>
     </AppLayout>
 </template>

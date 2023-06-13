@@ -39,9 +39,9 @@ class GameController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Game $game)
+    public function show(Game $id)
     {
-        $game = Game::find($game);
+        $game = Game::find($id);
         return Inertia::render('Game/Show', [
             'game' => $game
         ]);

@@ -54,12 +54,12 @@ const logout = () => {
                                 </NavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('game.index')" :active="route().current('game.index')">
+                                <NavLink :href="route('games.index')" :active="route().current('games.index')">
                                     {{ $t('Games') }}
                                 </NavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dataset.index')" :active="route().current('dataset.index')">
+                                <NavLink :href="route('datasets.index')" :active="route().current('datasets.index')">
                                     {{ $t('My Word Sets') }}
                                 </NavLink>
                             </div>
@@ -218,10 +218,10 @@ const logout = () => {
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             {{ $t('Dashboard') }}
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('game.index')" :active="route().current('game.index')">
+                        <ResponsiveNavLink :href="route('games.index')" :active="route().current('games.index')">
                             {{ $t('Games') }}
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('dataset.index')" :active="route().current('dataset.index')">
+                        <ResponsiveNavLink :href="route('datasets.index')" :active="route().current('datasets.index')">
                             {{ $t('My Word Sets') }}
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('about')" :active="route().current('about')">

@@ -16,19 +16,19 @@ class TypeSeeder extends Seeder
         Type::factory()->createMany(
             [
                 [
-                    'name' => 'SingleOption',
+                    'name' => 'Single Option',
                     'options' => 1,
                 ],
                 [
-                    'name' => 'TrueFalse',
+                    'name' => 'True/False',
                     'options' => 2,
                 ],
                 [
-                    'name' => 'MultipleOption',
+                    'name' => 'Multiple Option',
                     'options' => 4,
                 ],
                 [
-                    'name' => 'WordSet',
+                    'name' => 'Word Set',
                     'options' => 0,
                 ]
             ]);

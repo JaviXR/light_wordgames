@@ -85,6 +85,7 @@
     "Manage API Tokens": "Manage API Tokens",
     "Manage Role": "Manage Role",
     "Manage Team": "Manage Team",
+    "My Word Sets": "My Word Sets",
     "Name": "Name",
     "New Password": "New Password",
     "Not Found": "Not Found",
@@ -193,11 +194,13 @@
     "Your email address is unverified.": "Your email address is unverified.",
 
 
-
     "welcome.t1" : "Placeholder title",
     "welcome.t2" : "What's new?",
     "welcome.t3" : "Contact",
     "welcome.t4" : "About",
     "about.text" : "Final Degree Project by Javier Rodríguez Arenas, Higher Degree student in Multiplatform Application Development, for the CIFP Carlos III.",
-    "location" : "11 Jun 2023, Cartagena, Murcia, Spain"
+    "location" : "11 Jun 2023, Cartagena, Murcia, Spain",
+
+    "I don't know what to put here, so I'll just put a bunch of text": "I don't know what to put here, so I'll just put a bunch of text",
+    "Here you have a random gag to(maybe) make you laugh" : "Here you have a random gag to(maybe) make you laugh"
 }

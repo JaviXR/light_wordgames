@@ -40,17 +40,18 @@ Route::middleware([
     })->name('dashboard');
 
     //Games
-    Route::get('/games', [GameController::class, 'index'])->name('game.index');
-    Route::get('/games/{$game}', [GameController::class, 'show'])->name('game.show');
+    Route::resource('games', GameController::class);
 
     //Datasets
-    Route::get('/datasets', [DatasetController::class, 'index'])->name('dataset.index');
-    Route::get('/datasets/{$dataset}', [DatasetController::class, 'show'])->name('dataset.show');
+    Route::resource('datasets', DatasetController::class);
 
     //About
     Route::inertia('/about', 'About')->name('about');
 
     //Locales
-    Route::get('/{locale}', [WebController::class, 'swapLocale'])->name('locale');
+    Route::get('/locale/{locale}', [WebController::class, 'swapLocale'])->name('locale');
+
+    //Types
+    Route::get('/types', [WebController::class, 'types'])->name('types');
 });
 
