@@ -1,14 +1,14 @@
 <script setup>
 
-import AppLayout from "@/Layouts/AppLayout.vue";
-import Dataset from "@/Components/Dataset.vue";
-import PrimaryButton from "@/Components/PrimaryButton.vue";
-import form from "@/Pages/Dataset/Create.vue";
-import { Link } from "@inertiajs/vue3";
+    import AppLayout from "@/Layouts/AppLayout.vue";
+    import Dataset from "@/Components/Dataset.vue";
+    import PrimaryButton from "@/Components/PrimaryButton.vue";
+    import form from "@/Pages/Dataset/Create.vue";
+    import { Link } from "@inertiajs/vue3";
 
-const props = defineProps({
-    datasets: Array,
-})
+    const props = defineProps({
+        datasets: Array,
+    })
 
 </script>
 

@@ -1,11 +1,11 @@
 <script setup>
+    import AppLayout from "@/Layouts/AppLayout.vue";
+    import Game from "@/Components/Game.vue";
+    import {usePage} from "@inertiajs/vue3";
 
-import AppLayout from "@/Layouts/AppLayout.vue";
-import Game from "@/Components/Game.vue";
-
-const props = defineProps({
-    games: Array,
-})
+    const props = defineProps({
+        games: Array,
+    })
 
 </script>
 

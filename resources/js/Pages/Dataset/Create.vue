@@ -24,7 +24,7 @@ const submit = () => {
 </script>
 
 <template>
-    <AppLayout title="Create Dataset">
+    <AppLayout :title="$t('Create Dataset')">
         <template #header>
             <div class="flex flex-row justify-between">
                 <div class="justify-self-start">
@@ -42,25 +42,28 @@ const submit = () => {
             </div>
         </template>
 
-        <form @submit.prevent="submit">
-            <div>
-                <label for="name">{{ $t('Name') }}:</label>
-                <input type="text" id="name" v-model="form.name">
-            </div>
+        <div class="grid place-items-center w-full h-full m-auto">
+            <form @submit.prevent="submit">
+                <div class="grid grid-cols-1 w-fit place-items-end scale-100 border-blue-700 border-2 mt-10 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none">
+                    <div class="py-2">
+                        <label for="type_id" class="pr-16 text-center">{{ $t('Type') }}:</label>
+                        <select id="type_id" size="4" class="w-60" v-model="form.type_id">
+                            <option v-for="(type, index) in types" :key="index" :value="type.id">{{ type.name }}</option>
+                        </select>
+                    </div>
+                    <div class="py-2">
+                        <label for="name" class="pr-6">{{ $t('Name') }}:</label>
+                        <input type="text" id="name" class="w-80" v-model="form.name">
+                    </div>
 
-            <div>
-                <label for="type_id">{{ $t('Type') }}:</label>
-                <select id="type_id" v-model="form.type_id">
-                    <option v-for="(type, index) in types" :key="index" :value="type.id">{{ type.name }}</option>
-                </select>
-            </div>
+                    <div class="py-2">
+                        <label for="data" class="pr-2">{{ $t('Content') }}:</label>
+                        <input type="text" id="data" class="w-80 h-fit" v-model="form.content">
+                    </div>
 
-            <div>
-                <label for="data">{{ $t('Content') }}:</label>
-                <input type="text" id="data" v-model="form.content">
-            </div>
-
-            <PrimaryButton type="submit">{{ $t('Submit') }}</PrimaryButton>
-        </form>
+                    <PrimaryButton type="submit" class="py-2">{{ $t('Submit') }}</PrimaryButton>
+                </div>
+            </form>
+        </div>
     </AppLayout>
 </template>
