@@ -194,10 +194,15 @@
     "Your email address is unverified.": "Su dirección de correo electrónico no está verificada.",
 
 
-    "welcome.t1" : "Placeholder title",
+    "welcome.t1" : "Agradecimientos",
     "welcome.t2" : "Novedades",
     "welcome.t3" : "Contacto",
     "welcome.t4" : "Acerca de",
+    "thanks" : "Gracias a los que me han ayudado con este proyecto, especialmente a mi novia Laura, experta en presentaciones, a mis tutores Maria José Casalins y Francisco Esparza, y a mi compañero de piso graduado en DAW, Victor.",
+    "welcome.news.ver" : "Añadido recientemente en la versión 1.0:",
+    "welcome.news.p1" : "· ¡Juego El Ahorcado recién añadido!",
+    "welcome.news.p2" : "· ¡Juego Trivia recién añadido!",
+    "welcome.news.p3" : "· ¡Juego ¿Quién Quiere Ser Millonario? recién añadido!",
     "about.text" : "Trabajo de Final de Grado de Javier Rodríguez Arenas, estudiante de Grado Superior en Desarrollo de Aplicaciones Multiplataformas, para el CIFP Carlos III.",
     "location" : "11 Jun 2023, Cartagena, Murcia, Spain",
 

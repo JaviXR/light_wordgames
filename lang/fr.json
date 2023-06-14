@@ -194,10 +194,15 @@
     "Your email address is unverified.": "Votre adresse e-mail n'est pas vérifiée.",
 
 
-    "welcome.t1" : "Placeholder title",
+    "welcome.t1" : "Merci",
     "welcome.t2" : "Quoi de neuf?",
     "welcome.t3" : "Coordonnées",
     "welcome.t4" : "Environ",
+    "welcome.news.ver" : "Récemment ajouté dans la version 1.0:",
+    "welcome.news.p1" : "· Game The Hangman vient d’être ajouté!",
+    "welcome.news.p2" : "· Jeu Trivia nouvellement ajouté!",
+    "thanks" : "Merci à ceux qui m’ont aidé dans ce projet, en particulier ma petite amie Laura, experte en présentations, mes tuteurs Maria José Casalins et Francisco Esparza, et mon colocataire diplômé en DAW, Victor.",
+    "welcome.news.p3" : "· Jeu Qui veut être millionnaire? vient d’être ajouté!",
     "about.text" : "Projet de fin d’études par Javier Rodríguez Arenas, étudiant de haut niveau en développement d’applications multiplateformes, pour le CIFP Carlos III.",
     "location" : "11 Jun 2023, Cartagena, Murcia, Spain",
 

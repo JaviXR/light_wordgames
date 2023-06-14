@@ -194,10 +194,15 @@
     "Your email address is unverified.": "Your email address is unverified.",
 
 
-    "welcome.t1" : "Placeholder title",
+    "welcome.t1" : "Special Thanks",
     "welcome.t2" : "What's new?",
     "welcome.t3" : "Contact",
     "welcome.t4" : "About",
+    "thanks" : "Thanks to all the people who have helped me in this project, especially to my tutor, Maria José Casalins Pina, for his patience and dedication.",
+    "welcome.news.ver" : "Recently updated on version 1.0:",
+    "welcome.news.p1" : "· The Hangman game just added!",
+    "welcome.news.p2" : "· Trivia game just added!",
+    "welcome.news.p3" : "· Millionaire game just added!",
     "about.text" : "Final Degree Project by Javier Rodríguez Arenas, Higher Degree student in Multiplatform Application Development, for the CIFP Carlos III.",
     "location" : "11 Jun 2023, Cartagena, Murcia, Spain",
 

@@ -54,7 +54,7 @@ defineProps({
                             </div>
                             <div>
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Algo que todavía no está implementado.
+                                    {{ $t('thanks') }}
                                 </p>
                             </div>
                         </div>
@@ -72,7 +72,10 @@ defineProps({
                             </div>
                             <div>
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Recently updated on version 1.0: <br> &emsp;The Hangman game just added! <br> &emsp;Trivia game just added!
+                                    {{ $t('welcome.news.ver') }}
+                                    <br> &emsp;&emsp; {{ $t('welcome.news.p1') }}
+                                    <br> &emsp;&emsp; {{ $t('welcome.news.p2') }}
+                                    <br> &emsp;&emsp; {{ $t('welcome.news.p3') }}
                                 </p>
                             </div>
                         </div>
