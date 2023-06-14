@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Routing\UrlGenerator;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
 use LaravelLang\Publisher\Facades\Helpers\Locales;
