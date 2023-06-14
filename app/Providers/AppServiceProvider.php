@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
@@ -14,14 +15,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app['request']->server->set('HTTPS', true);
     }
 
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot(UrlGenerator $url): void
     {
+        $url->formatScheme('https://');
         Inertia::share('selectedLocale', function () {
             return app()->getLocale();
         });
