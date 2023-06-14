@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app['request']->server->set('HTTPS', true);
+//        $this->app['request']->server->set('HTTPS', true);
     }
 
     /**
@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(UrlGenerator $url): void
     {
-        $url->formatScheme('https://');
+//        $url->formatScheme('https://');
         Inertia::share('selectedLocale', function () {
             return app()->getLocale();
         });
